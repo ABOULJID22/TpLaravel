@@ -41,7 +41,7 @@
                             <a class="nav-link" href="{{ route('book.index') }}">Update </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('book.teams') }}">Teams </a>
+                            <a class="nav-link" href="{{ route('teams') }}">Teams </a>
                         </li>
                     @endauth
 

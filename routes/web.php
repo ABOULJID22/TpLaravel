@@ -41,7 +41,7 @@ Route::get('books', [App\Http\Controllers\BookController::class, 'bookshow'])->n
 Route::get('/',[HelloController::class,'index']);
 
 
-Route::get('/teams', [TeamController::class, 'index']);
+Route::get('/teams', [TeamController::class, 'index'])->name('teams');
 
 
 
