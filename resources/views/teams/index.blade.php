@@ -7,7 +7,8 @@
         @foreach ($data['groups'] as $grop)
             <h1>Groups {{ $grop['letter'] }}</h1>
 
-            <table class="table">
+            <table class="table">     
+            
                 <thead>
                     <tr>
                         <th scope="col">Team</th>

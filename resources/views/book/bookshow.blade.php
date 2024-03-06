@@ -9,7 +9,7 @@
     <div class="row">
         @foreach ($books as $book)
         <div class="col-3  mb-2">
-            <div class="book-card">
+            <div class="book-card " >
                 <div class="book-image">
                     @if($book->cover)
                     <img src="{{ asset('uploads/cover/'.$book->cover) }}" alt="{{ $book->designation }}">
@@ -38,6 +38,9 @@
                 <div class="book-actions">
                     <a href="" class="btn btn-primary">Acheter</a>
                     <button class="btn btn-success">Favoris</button>
+
+ <a href="{{ route('book.showDetail', $book->id) }}" class="btn btn-danger">Détails</a>
+
                 </div>
             </div>
         </div>

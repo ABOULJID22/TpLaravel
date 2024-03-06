@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="section-top-border">
-    <h3 class="mb-30">Liste des livres</h3>
+    <h3 class="mb-30" >Liste des livres</h3>
 
     <div class="row">
         <div class="col-md-4">

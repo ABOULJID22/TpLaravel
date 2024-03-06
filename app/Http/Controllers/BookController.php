@@ -116,7 +116,7 @@ class BookController extends Controller
             $file->move('uploads/cover/',$fileName);
             $book->cover=$fileName;
 
-            
+
 
             } else {
                 $fileName = $book->cover;
@@ -147,4 +147,15 @@ class BookController extends Controller
         $books = Book::all(); // Récupérez tous les livres
         return view('book.bookshow', compact('books')); // Passez les livres à la view bookshow
     }
+
+
+    /**
+ * Affiche les details d'un livre.
+ */
+public function showDetail(string $id)
+{
+    $book = Book::findOrFail($id);
+    return view('book.showDetail', compact('book'));
+}
+
 }

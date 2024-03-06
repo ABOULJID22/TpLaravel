@@ -36,6 +36,7 @@ Route::get('admin/routes', [App\Http\Controllers\HomeController::class,'admin'])
 Route::resource('book',BookController::class);
 
 Route::get('books', [App\Http\Controllers\BookController::class, 'bookshow'])->name('books');
+Route::get('/book/detail/{id}', [App\Http\Controllers\BookController::class,'showDetail'])->name('book.showDetail');
 
 
 Route::get('/',[HelloController::class,'index']);
@@ -46,10 +47,20 @@ Route::get('/teams', [TeamController::class, 'index'])->name('teams');
 
 
 
+/* Route::get('/exemple-response', function () {
+    $content = 'exemple content';
+    $headers = ['X-Exemple' => 'custom value'];
+    return response($content, 200)->withHeaders($headers);
+}); */
 
-
-
-
+Route::get('/exemple-response', function () {
+    $datajson =[
+        'exemple1' => 'content01',
+        'exemple2'=>'content02'
+    ] ;
+    $headers = ['X-Exemple' => 'custom value'];
+    return response()->json($datajson, 200)->withHeaders($headers);
+});
 
 
 

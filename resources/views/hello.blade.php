@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello {{$noms}} and  welcome to my page
+    <h1>hello{{--  {{$noms}}  --}}and  welcome to my page
     </h1>
     <h2>les langages </h2>
     <table border='1'>
